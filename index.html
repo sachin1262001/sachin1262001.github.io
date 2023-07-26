@@ -44,6 +44,24 @@
 <section id="contact" class="element_section section5">
 </section>	
 <script type="text/javascript">
+	$('.owl-carousel').owlCarousel({
+	    loop:true,
+	    margin:10,
+	    nav:true,
+	    responsive:{
+	        0:{
+	            items:1
+	        },
+	        600:{
+	            items:1
+	        },
+	        1000:{
+	            items:1
+	        }
+	    }
+	}) 
+</script>
+<script type="text/javascript">
 	$(document).ready(function() {
         $('.slide_menu').on('click', function() {
             $('.slide_menu').removeClass('current');
@@ -58,22 +76,7 @@
       $('html,body').animate({scrollTop:$(this.hash).offset().top - header_height}, 1000);
     });
 
-	$('.owl-carousel').owlCarousel({
-	    loop:true,
-	    margin:10,
-	    nav:true,
-	    responsive:{
-	        0:{
-	            items:1
-	        },
-	        600:{
-	            items:3
-	        },
-	        1000:{
-	            items:5
-	        }
-	    }
-	})  
+	 
 </script>
 </body>
 </html>
