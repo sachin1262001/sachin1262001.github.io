@@ -1,8 +1,79 @@
+<!DOCTYPE html>
 <html>
 <head>
-  <title>Test</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sachin</title>
+	<!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+	<link rel="stylesheet" type="text/css" href="owl.carousel.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- <script src="common.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="owl.carousel.js"></script>
+    <script src="owl.carousel.min.js"></script>
 </head>
- <body>
-   <h1>Hello World!</h1>
- </body> 
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid sticky_header">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"><img src='giphy.gif'></a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="slide_menu current active"><a href="#home" data-id="1" data-hover="Home">Home</a></li>
+      <li class="slide_menu"><a href="#skills" data-id="2" data-hover="Skills">Skills</a></li>
+      <li class="slide_menu"><a href="#work" data-id="3" data-hover="Work" >Work</a></li>
+      <li class="slide_menu"><a href="#education" data-id="4" data-hover="Education">Education</a></li>
+      <li class="slide_menu"><a href="#contact" data-id="5" data-hover="Contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+<section id="home" class="element_section section1">
+	<div class="owl-carousel owl-theme">
+    <div class="item"><img src="Video-Background-img.jpg"></div>
+    <div class="item"><img src="dark_blur.jpg"></div>
+    <div class="item"><img src="080121012747Desert.jpg"></div>
+</div>
+</section>	
+<section id="skills" class="element_section section2">
+</section>	
+<section id="work" class="element_section section3">
+</section>	
+<section id="education" class="element_section section4">
+</section>	
+<section id="contact" class="element_section section5">
+</section>	
+<script type="text/javascript">
+	$(document).ready(function() {
+        $('.slide_menu').on('click', function() {
+            $('.slide_menu').removeClass('current');
+            $(this).addClass('current');
+        });
+    });
+
+    jQuery(document).ready(function($) {
+      $(".slide_menu").click(function(event){
+	  var header_height = $(".sticky_header").height();
+      event.preventDefault();
+      $('html,body').animate({scrollTop:$(this.hash).offset().top - header_height}, 1000);
+    });
+
+	$('.owl-carousel').owlCarousel({
+	    loop:true,
+	    margin:10,
+	    nav:true,
+	    responsive:{
+	        0:{
+	            items:1
+	        },
+	        600:{
+	            items:3
+	        },
+	        1000:{
+	            items:5
+	        }
+	    }
+	})  
+</script>
+</body>
 </html>
