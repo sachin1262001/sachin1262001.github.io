@@ -12,6 +12,21 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="owl.carousel.js"></script>
     <script src="owl.carousel.min.js"></script>
+<style>
+.navbar-brand>img {
+    display: block;
+    width: 30px;
+}
+	
+#owl-demo .item{
+  margin: 3px;
+}
+#owl-demo .item img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+</style>	
 </head>
 <body>
 <nav class="navbar navbar-inverse">
@@ -44,22 +59,19 @@
 <section id="contact" class="element_section section5">
 </section>	
 <script type="text/javascript">
-	$('.owl-carousel').owlCarousel({
-	    loop:true,
-	    margin:10,
-	    nav:true,
-	    responsive:{
-	        0:{
-	            items:1
-	        },
-	        600:{
-	            items:1
-	        },
-	        1000:{
-	            items:1
-	        }
-	    }
-	}) 
+$(document).ready(function() {
+ 
+  $("#owl-demo").owlCarousel({
+ 
+      autoPlay: 3000, //Set AutoPlay to 3 seconds
+ 
+      items : 3,
+      itemsDesktop : [1199,1],
+      itemsDesktopSmall : [979,1]
+ 
+  });
+ 
+});
 </script>
 <script type="text/javascript">
 	$(document).ready(function() {
